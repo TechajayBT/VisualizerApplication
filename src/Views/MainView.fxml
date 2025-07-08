@@ -15,5 +15,9 @@
         <Tab text="Queue Visualizer" closable="false">
             <fx:include source="Queue.fxml"/>
         </Tab>
+
+        <Tab text="Stack" closable="false">
+            <fx:include source="StackVisualizer.fxml"/>
+        </Tab>
     </tabs>
 </TabPane>
