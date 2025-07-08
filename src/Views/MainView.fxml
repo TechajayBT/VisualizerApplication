@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml">
+
+    <tabs>
+        <Tab text="Merge Sort" closable="false">
+            <fx:include source="MergeSort.fxml"/>
+        </Tab>
+
+        <Tab text="Queue Visualizer" closable="false">
+            <fx:include source="Queue.fxml"/>
+        </Tab>
+    </tabs>
+</TabPane>
