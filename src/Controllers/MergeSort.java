@@ -23,7 +23,7 @@ public class MergeSort {
 
     private int[] originalArray;
     private int[] workingArray;
-    private final int delay = 500; // Reduced delay for better responsiveness
+    private final int delay = 500; 
 
     // Responsive constants
     private double verticalGap = 80;
