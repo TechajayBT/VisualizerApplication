@@ -31,8 +31,8 @@ A comprehensive Visualizer Application built with Java and JavaFX to help users 
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/dsa-visualizer.git
-   cd dsa-visualizer
+   git clone https://github.com/TechajayBT/VisualizerApplication.git
+   cd VisualizerApplication
    ```
 
 2. **Set Up JavaFX:**  
