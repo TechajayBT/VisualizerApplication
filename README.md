@@ -1,108 +1,56 @@
-# DSA Visualizer Application
+# VisualizerApplication
 
-A comprehensive Visualizer Application built with Java and JavaFX to help users understand and interactively learn various Data Structures and Algorithms (DSA). This application provides visual representations, step-by-step animations, and interactive controls for a wide range of DSA topics.
+VisualizerApplication is a Java-based tool designed to help you visualize all major Data Structures and Algorithms (DSA) concepts. With this intuitive application, learners and enthusiasts can see the inner workings of algorithms and data structures, making it easier to understand and master DSA fundamentals.
 
 ## Features
 
-- **Visualize Popular Data Structures:**  
-  Includes Arrays, Linked Lists, Stacks, Queues, Trees (Binary, AVL, Heap, etc.), Graphs, Hash Tables, and more.
-
-- **Algorithm Animations:**  
-  Step-by-step visualizations for sorting algorithms (Bubble, Insertion, Merge, Quick, etc.), searching algorithms, traversals (BFS, DFS), and more.
-
-- **Interactive Controls:**  
-  Manipulate data structures in real time—add, delete, search, and modify elements. Control the speed of animations.
-
-- **Educational Descriptions:**  
-  Displays explanations, time complexity, and use-cases for each data structure and algorithm.
-
-- **User-Friendly Interface:**  
-  Built using JavaFX, ensuring a smooth, modern, and responsive user experience.
+- **Interactive Visualizations**: Step-by-step execution and visualization of popular data structures (arrays, linked lists, trees, graphs, stacks, queues, etc.).
+- **Algorithm Demonstrations**: See in real-time how sorting, searching, traversal, and other algorithms operate.
+- **User-friendly Interface**: Simple and clean UI for easy navigation and use.
+- **Educational Tooltips**: Get helpful explanations and tips as you interact with the visualizations.
+- **Custom Input**: Try your own data and watch how the algorithms respond.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Java JDK 11 or above
-- JavaFX SDK (Download from [GluonHQ](https://gluonhq.com/products/javafx/))
-- Maven or Gradle (optional, for dependency management)
+- Java (JDK 8 or later)
+- (Optional) An IDE like IntelliJ IDEA or Eclipse for development
 
-### Running the Application
+### Installation
 
-1. **Clone the Repository:**
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/TechajayBT/VisualizerApplication.git
+   ```
+2. **Navigate to the project directory:**
+   ```bash
    cd VisualizerApplication
    ```
-
-2. **Set Up JavaFX:**  
-   Make sure the JavaFX SDK is installed and configured in your IDE/build tool.
-
-3. **Build and Run:**
-   - **Using Maven:**
+3. **Build and run the application:**
+   - If using an IDE, open the project and run the main class.
+   - If using the command line:
      ```bash
-     mvn clean javafx:run
+     javac -d bin src/**/*.java
+     java -cp bin Main
      ```
-   - **Using Gradle:**
-     ```bash
-     gradle run
-     ```
-   - **Manual (IDE):**
-     - Open the project in your preferred Java IDE.
-     - Configure JavaFX libraries.
-     - Run the `Main` class.
 
-## Project Structure
+## Usage
 
-```
-dsa-visualizer/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── (Java source files)
-│   │   ├── resources/
-│   │   │   └── (FXML, CSS, images)
-├── README.md
-├── pom.xml / build.gradle
-└── ...
-```
-
-## Supported Visualizations
-
-- **Data Structures:**
-  - Array
-  - Linked List (Singly, Doubly, Circular)
-  - Stack
-  - Queue
-  - Binary Tree, BST, AVL Tree, Heap
-  - Graphs (Directed, Undirected)
-  - Hash Table
-
-- **Algorithms:**
-  - Sorting: Bubble, Selection, Insertion, Merge, Quick, Heap Sort
-  - Searching: Linear, Binary Search
-  - Tree Traversals: In-order, Pre-order, Post-order, Level-order
-  - Graph Traversals: BFS, DFS
-
-
+- Launch the application.
+- Select a data structure or algorithm to visualize.
+- Enter custom data or use sample data.
+- Step through the execution and observe how the algorithm operates.
 
 ## Contributing
 
-Contributions are welcome!  
-- Fork the repository
-- Create a new branch (`git checkout -b feature/your-feature`)
-- Commit your changes
-- Open a Pull Request
+Contributions are welcome! Please open an issue or submit a pull request for improvements, bug fixes, or new features.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License.
 
 ## Acknowledgments
 
-- JavaFX documentation and community
-- Open-source DSA visualizer projects for inspiration
-
----
-
-**Happy Learning and Visualizing!**
+- Inspired by the need for better DSA learning tools.
+- Thanks to all contributors and users!
