@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controllers.ArrayVisualizerController">
+
+    <VBox spacing="15" layoutX="20" layoutY="20">
+
+        <!-- Input for array size -->
+        <HBox spacing="10">
+            <Label text="Enter Array Size:"/>
+            <TextField fx:id="sizeInput" prefWidth="60"/>
+            <Button text="Create Array" onAction="#handleCreateArray"/>
+        </HBox>
+
+        <!-- Container to enter values -->
+        <VBox fx:id="valueInputContainer" spacing="10"/>
+
+        <!-- Submit Button -->
+        <Button fx:id="submitButton" text="Submit Values" visible="false" onAction="#handleSubmitValues"/>
+
+        <!-- Final Display of Array -->
+        <VBox fx:id="finalArrayDisplay" spacing="10"/>
+
+    </VBox>
+</AnchorPane>
