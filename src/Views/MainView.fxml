@@ -11,6 +11,9 @@
         <Tab text="Arrays" closable="false">
             <fx:include source="ArrayVisualizer.fxml"/>
         </Tab>
+        <Tab text="LinkedList" closable="false" >
+            <fx:include source="LinkedList.fxml"/>
+        </Tab>
         <Tab text="Merge Sort" closable="false">
             <fx:include source="MergeSort.fxml"/>
         </Tab>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="Controllers.LinkedListController">
+    <VBox spacing="10">
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+
+        <!-- Input Fields -->
+        <HBox spacing="10">
+            <TextField fx:id="valueInput" promptText="Enter Value" />
+            <TextField fx:id="indexInput" promptText="Index (for insert/delete)" />
+        </HBox>
+
+        <!-- Insert Buttons -->
+        <HBox spacing="10">
+            <Button text="Insert First" onAction="#handleInsertAtFirst" />
+            <Button text="Insert At Index" onAction="#handleInsertAtIndex" />
+            <Button text="Insert Last" onAction="#handleInsertAtLast" />
+        </HBox>
+
+        <!-- Delete & Traverse Buttons -->
+        <HBox spacing="10">
+            <Button text="Delete First" onAction="#handleDeleteAtFirst" />
+            <Button text="Delete At Index" onAction="#handleDeleteAtIndex" />
+            <Button text="Traverse" onAction="#handleTraverse" />
+        </HBox>
+
+        <!-- Linked List Visualization -->
+        <ScrollPane prefHeight="300" fitToWidth="true">
+            <HBox fx:id="linkedListDisplay" spacing="15">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+            </HBox>
+        </ScrollPane>
+    </VBox>
+</AnchorPane>
