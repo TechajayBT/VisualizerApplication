@@ -36,6 +36,7 @@ public class Main extends Application {
         Scene scene = new Scene(root, 1200, 800);
         stage.setTitle("All Visualizers");
         stage.setScene(scene);
+        stage.setFullScreen(true);
         stage.show();
     }
 
