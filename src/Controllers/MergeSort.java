@@ -85,18 +85,23 @@ public class MergeSort {
     }
 
     private void mergeSortAnimated(int left, int right, double x, double y, double availableWidth) throws InterruptedException {
-        int[] currentSubarray = Arrays.copyOfRange(workingArray, left, right + 1);
-
         if (left == right) {
-            Platform.runLater(() -> createTreeNode(currentSubarray, x, y, Color.LIGHTGREEN, "Leaf"));
+            int[] leaf = Arrays.copyOfRange(workingArray, left, right + 1);
+            Platform.runLater(() -> createTreeNode(leaf, x, y, Color.LIGHTGREEN, "Leaf"));
             Thread.sleep(delay);
             return;
         }
 
-        Platform.runLater(() -> createTreeNode(currentSubarray, x, y, Color.LIGHTCORAL, "Divide"));
+        int mid = (left + right) / 2;
+        int[] leftPart = Arrays.copyOfRange(workingArray, left, mid + 1);
+        int[] rightPart = Arrays.copyOfRange(workingArray, mid + 1, right + 1);
+
+        Platform.runLater(() -> {
+            createTreeNode(leftPart, x - availableWidth / 4, y, Color.LIGHTPINK, "Left");
+            createTreeNode(rightPart, x + availableWidth / 4, y, Color.LIGHTYELLOW, "Right");
+        });
         Thread.sleep(delay);
 
-        int mid = (left + right) / 2;
         double childY = y + verticalGap;
         double spacing = Math.max(availableWidth / 4, minHorizontalGap * 2);
         double leftChildX = Math.max(containerMargin + minNodeWidth / 2, x - spacing);
@@ -160,16 +165,21 @@ public class MergeSort {
     }
 
     private void mergeSortStepMode(int left, int right, double x, double y, double availableWidth) {
-        int[] currentSubarray = Arrays.copyOfRange(workingArray, left, right + 1);
-
         if (left == right) {
-            mergeSteps.add(() -> createTreeNode(currentSubarray, x, y, Color.LIGHTGREEN, "Leaf"));
+            int[] leaf = Arrays.copyOfRange(workingArray, left, right + 1);
+            mergeSteps.add(() -> createTreeNode(leaf, x, y, Color.LIGHTGREEN, "Leaf"));
             return;
         }
 
-        mergeSteps.add(() -> createTreeNode(currentSubarray, x, y, Color.LIGHTCORAL, "Divide"));
-
         int mid = (left + right) / 2;
+        int[] leftPart = Arrays.copyOfRange(workingArray, left, mid + 1);
+        int[] rightPart = Arrays.copyOfRange(workingArray, mid + 1, right + 1);
+
+        mergeSteps.add(() -> {
+            createTreeNode(leftPart, x - availableWidth / 4, y, Color.LIGHTPINK, "Left");
+            createTreeNode(rightPart, x + availableWidth / 4, y, Color.LIGHTYELLOW, "Right");
+        });
+
         double childY = y + verticalGap;
         double spacing = Math.max(availableWidth / 4, minHorizontalGap * 2);
         double leftChildX = Math.max(containerMargin + minNodeWidth / 2, x - spacing);
@@ -182,6 +192,7 @@ public class MergeSort {
         int[] merged = mergeArrays(left, mid, right);
         mergeSteps.add(() -> createTreeNode(merged, x, y + 15, Color.LIGHTBLUE, "Merged"));
     }
+
 
     private int[] mergeArrays(int left, int mid, int right) {
         int[] merged = new int[right - left + 1];
