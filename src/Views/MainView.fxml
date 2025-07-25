@@ -30,6 +30,11 @@
             <Button fx:id="stackBtn" text="Stack Visualizer"
                     style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: #c0392b;"
                     maxWidth="Infinity"/>
+            <Button fx:id="treeBtn" text="Tree Visualizer"
+                    style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: #16a085;"
+                    maxWidth="Infinity"/>
+
+
         </VBox>
     </left>
 

@@ -13,7 +13,6 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        // Load main layout
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/MainView.fxml"));
         BorderPane root = loader.load();
 
@@ -24,6 +23,9 @@ public class Main extends Application {
         Button mergeSortBtn = (Button) root.lookup("#mergeSortBtn");
         Button queueBtn = (Button) root.lookup("#queueBtn");
         Button stackBtn = (Button) root.lookup("#stackBtn");
+        Button treeBtn = (Button) root.lookup("#treeBtn");
+
+
 
         // Assign actions
         arrayBtn.setOnAction(e -> loadView("ArrayVisualizer.fxml"));
@@ -31,7 +33,7 @@ public class Main extends Application {
         mergeSortBtn.setOnAction(e -> loadView("MergeSort.fxml"));
         queueBtn.setOnAction(e -> loadView("Queue.fxml"));
         stackBtn.setOnAction(e -> loadView("StackVisualizer.fxml"));
-
+        treeBtn.setOnAction(e -> loadView("TreeVisualizer.fxml"));
         // Setup and show scene
         Scene scene = new Scene(root, 1200, 800);
         stage.setTitle("All Visualizers");

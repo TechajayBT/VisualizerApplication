@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controllers.TreeVisualizerController"
+            prefWidth="1200" prefHeight="800">
+
+    <VBox spacing="10" layoutX="30" layoutY="20">
+        <TextField fx:id="inputField" promptText="Enter value"/>
+        <HBox spacing="10">
+            <Button text="Insert" onAction="#handleInsert"/>
+            <Button text="Inorder" onAction="#handleInorder"/>
+            <Button text="Preorder" onAction="#handlePreorder"/>
+            <Button text="Postorder" onAction="#handlePostorder"/>
+        </HBox>
+        <TextArea fx:id="outputArea" prefWidth="400" prefHeight="150"/>
+    </VBox>
+
+    <Pane fx:id="treePane" layoutX="450" layoutY="20" prefWidth="700" prefHeight="700"
+          style="-fx-background-color: #f5f5f5; -fx-border-color: #bdc3c7;"/>
+</AnchorPane>
