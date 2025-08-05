@@ -24,10 +24,12 @@ public class Main extends Application {
         Button queueBtn = (Button) root.lookup("#queueBtn");
         Button stackBtn = (Button) root.lookup("#stackBtn");
         Button treeBtn = (Button) root.lookup("#treeBtn");
+        Button recursBtn = (Button) root.lookup("#recursBtn");
 
 
 
         // Assign actions
+        recursBtn.setOnAction(e->loadView("RecursionVisualizer.fxml"));
         arrayBtn.setOnAction(e -> loadView("ArrayVisualizer.fxml"));
         linkedListBtn.setOnAction(e -> loadView("LinkedList.fxml"));
         mergeSortBtn.setOnAction(e -> loadView("MergeSort.fxml"));

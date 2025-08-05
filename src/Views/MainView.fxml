@@ -33,6 +33,9 @@
             <Button fx:id="treeBtn" text="Tree Visualizer"
                     style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: #16a085;"
                     maxWidth="Infinity"/>
+            <Button fx:id="recursBtn" text="Recursion Visualizer"
+                    style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-colr: #27ae60"
+                    maxWidth="Infinity"/>
 
 
         </VBox>
