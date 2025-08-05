@@ -4,7 +4,7 @@ VisualizerApplication is a Java-based tool designed to help you visualize all ma
 
 ## Features
 
-- **Interactive Visualizations**: Step-by-step execution and visualization of popular data structures (arrays, linked lists, trees, graphs, stacks, queues, etc.).
+- **Interactive Visualizations**: Step-by-step execution and visualization of popular data structures (arrays, linked lists, trees,  stacks, queues, etc.).
 - **Algorithm Demonstrations**: See in real-time how sorting, searching, traversal, and other algorithms operate.
 - **User-friendly Interface**: Simple and clean UI for easy navigation and use.
 - **Educational Tooltips**: Get helpful explanations and tips as you interact with the visualizations.
